@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "chalk": "jsr:@nothing628/chalk@^1.0.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "scriptId": "322",
+  "url": "file:///Users/shikhasingh/workspace/practice/test-coverage/src/demo1.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 91, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "square",
+      "ranges": [{ "startOffset": 22, "endOffset": 40, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "cube",
+      "ranges": [{ "startOffset": 63, "endOffset": 89, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

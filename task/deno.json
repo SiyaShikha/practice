@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "ls": "ls",
+    "main": "echo 'console.log(`Hello world`)' >> main.js",
+    "runMain": {
+      "command": "deno main.js",
+      "dependencies": ["ls", "main"]
+    }
+  },
+  "imports": {
+    "@sebastiengllmt/material-chalk": "jsr:@sebastiengllmt/material-chalk@^1.1.1"
+  }
+}

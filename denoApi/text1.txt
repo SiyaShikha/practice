@@ -1,0 +1,4 @@
+Hello! This is Deno read
+append using deno write function
+append using deno write function
+{"cloth type":"cotton","colour":"black","size":30}

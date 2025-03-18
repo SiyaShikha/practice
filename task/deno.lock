@@ -1,0 +1,25 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@sebastiengllmt/material-chalk@^1.1.1": "1.1.1",
+    "npm:@material/material-color-utilities@0.3": "0.3.0"
+  },
+  "jsr": {
+    "@sebastiengllmt/material-chalk@1.1.1": {
+      "integrity": "a5bc67d36fa6fb9e46c003bf14e254b7d32dfade185b7a74527f4bb73a71fe16",
+      "dependencies": [
+        "npm:@material/material-color-utilities"
+      ]
+    }
+  },
+  "npm": {
+    "@material/material-color-utilities@0.3.0": {
+      "integrity": "sha512-ztmtTd6xwnuh2/xu+Vb01btgV8SQWYCaK56CkRK8gEkWe5TuDyBcYJ0wgkMRn+2VcE9KUmhvkz+N9GHrqw/C0g=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@sebastiengllmt/material-chalk@^1.1.1"
+    ]
+  }
+}

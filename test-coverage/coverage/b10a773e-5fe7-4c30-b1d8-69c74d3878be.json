@@ -1,0 +1,24 @@
+{
+  "scriptId": "322",
+  "url": "file:///Users/shikhasingh/workspace/practice/test-coverage/src/demo2.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 169, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "isEven",
+      "ranges": [{ "startOffset": 22, "endOffset": 58, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "isOdd",
+      "ranges": [
+        { "startOffset": 82, "endOffset": 167, "count": 2 },
+        { "startOffset": 114, "endOffset": 165, "count": 1 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}
