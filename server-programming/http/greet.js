@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+export const createHtml = (name) => {
+  return `
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Hello World !!!</h1>
+    <h1>Welcome ${name || "buddy"}!!!</h1>
   </body>
-</html>
+</html>`;
+};

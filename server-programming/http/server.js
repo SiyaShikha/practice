@@ -1,3 +1,5 @@
+import { createHtml } from "./greet.js";
+
 const handleTime = () => {
   return new Response(new Date().toTimeString());
 };
@@ -8,30 +10,39 @@ const handleNotFound = () => {
   });
 };
 
-const handleHello = async () => {
-  const file = await Deno.readFile("hello.html");
-  return new Response(file, {
+const handleGreet = async (request) => {
+  const url = new URL(request.url);
+  const name = url.searchParams.get("name");
+
+  const html = createHtml(name);
+  return new Response(html, {
     headers: {
       "content-type": "text/html",
     },
   });
 };
 
+const handleStyle = async () => {
+  const file = await Deno.readFile("style.css");
+  return new Response(file, {
+    headers: {
+      "content-type": "text/css",
+    },
+  });
+};
+
+const paths = {
+  "/time": handleTime,
+  "/greet": handleGreet,
+  "/style.css": handleStyle,
+};
+
 const handler = (request) => {
   const url = new URL(request.url);
-  console.log(url);
-  console.log(`URL >> ${url}`);
-  // console.log(`searchParams >> ${url.searchParams}`);
-  // console.log(`pathname >> ${url.pathname}`);
-  console.log(request);
 
-  if (url.pathname === "/time") {
-    return handleTime();
+  if (url.pathname in paths) {
+    return paths[url.pathname](request);
   }
-
-  // if (url.pathname === "/hello") {
-  //   return handleHello();
-  // }
 
   return handleNotFound();
 };
